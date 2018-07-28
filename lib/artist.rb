@@ -19,9 +19,10 @@ class Artist
 
   def self.all
     @@all
-  end 
+  end
 
   def find_or_create_by_name(name)
+    result = self.all.detect { |a| a.name == name }
   end
 
 end
