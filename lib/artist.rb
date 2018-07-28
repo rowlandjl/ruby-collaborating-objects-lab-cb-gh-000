@@ -21,7 +21,7 @@ class Artist
     @@all
   end
 
-  def find_or_create_by_name(name)
+  def self.find_or_create_by_name(name)
     result = self.all.detect { |a| a.name == name }
     if result == nil
       artist = Artist.new(name)
@@ -30,5 +30,8 @@ class Artist
     end
     result 
   end
+
+  def print_songs 
+    
 
 end
