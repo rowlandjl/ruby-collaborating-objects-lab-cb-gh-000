@@ -28,10 +28,11 @@ class Artist
       result = artist
       artist.save
     end
-    result 
+    result
   end
 
-  def print_songs 
-    
+  def print_songs
+    self.songs.each { |s| puts s.name }
+  end 
 
 end
