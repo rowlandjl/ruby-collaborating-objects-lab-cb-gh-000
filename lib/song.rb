@@ -6,12 +6,12 @@ class Song
     @name = name
   end
 
-  def new_by_filename(filename)
+  def self.new_by_filename(filename)
     parse = filename.split(" - ")
     artist = Artist.find_or_create_by_name(parse[0])
     song = Song.new(parse[1])
     artist.add_song(song)
-    song 
+    song
   end
 
 end
