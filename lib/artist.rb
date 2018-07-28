@@ -23,6 +23,12 @@ class Artist
 
   def find_or_create_by_name(name)
     result = self.all.detect { |a| a.name == name }
+    if result == nil 
+      artist = Artist.new(name)
+      result = artist 
+      artist.save 
+    end 
+    result 
   end
 
 end
